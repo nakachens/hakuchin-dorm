@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import LoadLord, { useLoadLord } from './assets/LoadLord';
 import Monta from './friends/Monta';
 import Miru from './friends/Miru';
 import Dore from './friends/Dore';
@@ -16,6 +17,8 @@ const PAGES = [
 ];
 
 function App() {
+  const { loaded, total, done: assetsReady } = useLoadLord();
+
   const [scale, setScale] = useState(1);
   const [muted, setMuted] = useState(false);
   const [panelOpen, setPanelOpen] = useState(false);
@@ -83,10 +86,13 @@ function App() {
   };
 
   return (
+    <>
+    {!assetsReady && <LoadLord loaded={loaded} total={total} />}
     <div style={{
       width: '100vw',
       height: '100vh',
       background: '#403f3f',
+      visibility: assetsReady ? 'visible' : 'hidden',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
@@ -130,7 +136,7 @@ function App() {
           {/*mute/unmute*/}
           <button
             onClick={toggleMute}
-            style={{ width:72, height:72, padding:0, background:'none',border:'none', cursor:'pointer' }}
+            style={{ width:100, height:100, padding:0, background:'none',border:'none', cursor:'pointer' }}
           >
             <img
               src={muted ? '/unmute.gif' : '/mute.gif'}
@@ -142,8 +148,7 @@ function App() {
           {/*dev notes btn */}
           <button
             onClick={openPanel}
-            style={{ width: 72, height: 72, padding: 0, background: 'none', border: 'none', cursor: 'pointer' }}
-            aria-label="Open read panel"
+            style={{ width: 100, height: 100, padding: 0, background: 'none', border: 'none', cursor: 'pointer' }}
           >
             <img
               src="/read.gif"
@@ -220,6 +225,7 @@ function App() {
         )}
       </div>
     </div>
+    </>
   );
 }
 
