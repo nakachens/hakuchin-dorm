@@ -14,7 +14,7 @@ const IMAGE_ASSETS = [
   '/read.gif',
   '/next.gif',
   '/back.gif',
-  // characters — idle + hold
+  // characters 
   '/animations/monta/monta_idle.gif',
   '/animations/monta/monta_hold.png',
   '/animations/miru/miru_idle.gif',
@@ -34,7 +34,6 @@ const AUDIO_ASSETS = [
 
 const TOTAL = IMAGE_ASSETS.length + AUDIO_ASSETS.length;
 
-// ─── Hook ─────────────────────────────────────────────────────────────────────
 export function useLoadLord() {
   const [loaded, setLoaded] = useState(0);
   const [done, setDone]     = useState(false);
@@ -47,15 +46,13 @@ export function useLoadLord() {
       if (count >= TOTAL) setDone(true);
     };
 
-    // Images / GIFs
     IMAGE_ASSETS.forEach(src => {
       const img = new Image();
       img.onload  = tick;
-      img.onerror = tick; // still count failed assets so we never hang
+      img.onerror = tick; 
       img.src     = src;
     });
 
-    // Audio — load enough to play without buffering
     AUDIO_ASSETS.forEach(src => {
       const audio = new Audio();
       audio.oncanplaythrough = tick;
@@ -68,7 +65,6 @@ export function useLoadLord() {
   return { loaded, total: TOTAL, done };
 }
 
-// ─── Loading screen component ─────────────────────────────────────────────────
 export default function LoadLord({ loaded, total }) {
   const pct = total > 0 ? Math.round((loaded / total) * 100) : 0;
 
@@ -76,14 +72,14 @@ export default function LoadLord({ loaded, total }) {
     <div style={{
       position: 'fixed',
       inset: 0,
-      background: '#fffbeb', // amber-50
+      background: '#fffbeb', 
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
       zIndex: 9999,
     }}>
-      {/* Track */}
+      {/* load bar*/}
       <div style={{
         width: 320,
         height: 18,
@@ -92,7 +88,7 @@ export default function LoadLord({ loaded, total }) {
         borderRadius: 2,
         overflow: 'hidden',
       }}>
-        {/* Fill */}
+        {/* filler */}
         <div style={{
           height: '100%',
           width: `${pct}%`,
@@ -101,7 +97,7 @@ export default function LoadLord({ loaded, total }) {
         }} />
       </div>
 
-      {/* Percentage label */}
+      {/* % label*/}
       <p style={{
         marginTop: 12,
         fontFamily: 'monospace',
