@@ -1,16 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 
-/**
- * FloatingDialogue — shared bubble renderer for all pets.
- *
- * Props:
- *   activeDialogues  – array of { id, text, jitter } shown as floating click bubbles
- *   dragDialogue     – string shown while dragging
- *   isDragging       – bool
- *   animationName    – unique CSS keyframe name per pet (e.g. "miruClickFloat")
- *   duration         – animation duration in ms (default 1800)
- */
 const Chatbox = ({
   activeDialogues = [],
   dragDialogue = '',
@@ -28,7 +18,7 @@ const Chatbox = ({
       }
     `}</style>
 
-    {/* click bubbles — each one floats and fades independently */}
+    {/* click bubbles; each one floats and fades independently */}
     {activeDialogues.map((d) => (
       <div
         key={d.id}
