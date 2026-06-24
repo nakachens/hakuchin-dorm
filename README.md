@@ -1,16 +1,10 @@
-# React + Vite
+## a visual art dorm!! .✦ ݁˖
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is an interactive app i made because i wanted to reduce my.. cortisol levels..
+its an app which makes me really happy because of some silly character interactions, playing around here and there with them, its such a perfect de-stress method!! 
+I SOO LOVE IT!
 
-Currently, two official plugins are available:
+Its made in React JS, a very simple project, all art and animations are handmade by me and me only in CSP (clip studio paint) (˶ᵔ ᵕ ᵔ˶)! (hope u like it~)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+I've also put up a tutorial on how to make this codedex, so do check it out !! [HERE](https://www.codedex.io/community/monthly-challenge/submission/5o5VozfORg5cNKQiXF3Z) 
+I do hope this helps you out!
