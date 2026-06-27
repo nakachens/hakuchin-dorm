@@ -4,7 +4,7 @@ This is an interactive app i made in React where YOUR characters live on a fixed
 you can interact with your characters, and drag them around the screen! 
 Each character is its own self-contained component! Or you can say, they all are just built different~ muhehe
 
-The canvas scales to fit any screen size automatically, responsivity like they did in old apps hehe
+The canvas scales to fit any screen size automatically, responsivity like they did in old apps!
 
 this project makes me really happy because of these silly character interactions, playing around here and there with them, its such a perfect de-stress method!! 
 I SOO LOVE IT!
