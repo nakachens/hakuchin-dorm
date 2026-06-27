@@ -9,6 +9,8 @@ The canvas scales to fit any screen size automatically, responsivity like they d
 this project makes me really happy because of these silly character interactions, playing around here and there with them, its such a perfect de-stress method!! 
 I SOO LOVE IT!
 
+you can put these silly characters in your own website to add a bit of unique personality and spice things up just right! 
+
 ### ★ file structure ദ്ദി(˵ •̀ ᴗ - ˵ ) ✧
  
 ```
@@ -47,7 +49,9 @@ these are the actual characters! they are clickable, resulting in super interact
 like you can see how i made each room kinda thingy for each character and they spawn to their respective positions, though i can really move them arond here and there~
 
 There are two types of characters you can find in this app!
+
 ᯓ➤ draggable ones : they can be dragged around throughout the screen! you can play around with them, put them at any corner of your screen!
+
 ᯓ➤ non-draggable ones : they cannot be moved, just interacted using click animations! in my case, Kira is non draggable because he's eating!! you shall not interrupt him while he's eating! the same goes for Ryu!! he's falling asleep! dont disturb!!!
 
 ### ★ The chatbox component!
